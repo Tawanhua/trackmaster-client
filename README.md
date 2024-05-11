@@ -9,6 +9,10 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+![Screenshot 2024-05-11 043357](https://github.com/Tawanhua/trackmaster-client/assets/64333670/9013a9e0-a710-4e28-9b06-34f380abc11f)
+
+![Screenshot 2024-05-11 043426](https://github.com/Tawanhua/trackmaster-client/assets/64333670/6384eb89-6253-4ba5-b6c6-4d2a8a2bfc85)
+
 ## Project Description
 
 The backend of the Task Manager Application is developed using Java with Spring Boot framework. It provides a RESTful API for managing tasks, allowing users to perform CRUD (Create, Read, Update, Delete) operations. The backend interacts with a MySQL database to store task-related data, including task titles, descriptions, due dates, and status.
