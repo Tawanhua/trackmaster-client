@@ -19,6 +19,10 @@ const TasksView = () => {
       setTasks(result.data)
     }
   }
+  const handleDelte = async(id) => {
+    await axios.delete(`http://localhost:8080/tasks/delete/${id}`)
+    loadTasks()
+  }
   return (
     <section>
       <table className='table table-bordered table-hover shadow'>
@@ -53,7 +57,8 @@ const TasksView = () => {
               </Link>
             </td>
             <td className='mx-2'>
-            <button className='btn btn-danger'>
+            <button className='btn btn-danger'
+            onClick={() => handleDelte(task.id)}>
               <IoTrashOutline />
               </button>
             </td>
