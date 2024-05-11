@@ -21,7 +21,7 @@ const TasksView = () => {
   }
   return (
     <section>
-      <table className='table table-bordered table-hover'>
+      <table className='table table-bordered table-hover shadow'>
         <thead>
             <tr className='text-center'>
                 <th>ID</th>
