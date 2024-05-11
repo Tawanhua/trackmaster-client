@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { IoTrashOutline, IoPencil, IoEye } from "react-icons/io5";
+import { IoTrashSharp, IoPencil, IoInformationCircle } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Search from '../common/Search';
 
@@ -39,7 +39,8 @@ const TasksView = () => {
                 <th>Title</th>
                 <th>Description</th>
                 <th>Duration</th>
-                <th colSpan='3'>Actions</th>
+                <th colSpan='2'>Actions</th>
+                <th>Info</th>
             </tr>
         </thead>
         <tbody className='text-center'>
@@ -55,20 +56,20 @@ const TasksView = () => {
             <td>{task.description}</td>
             <td>{task.duration}</td>
             <td className='mx-2'>
-            <Link to={`/task-profile/${task.id}`} className='btn btn-info'>
-              <IoEye />
-              </Link>
-            </td>
-            <td className='mx-2'>
-            <Link to={`/edit-task/${task.id}`} className='btn btn-warning'>
+            <Link to={`/edit-task/${task.id}`} className='btn btn-outline-warning text-dark'>
               <IoPencil />
               </Link>
             </td>
             <td className='mx-2'>
-            <button className='btn btn-danger'
+            <button className='btn btn-outline-danger text-dark'
             onClick={() => handleDelte(task.id)}>
-              <IoTrashOutline />
+              <IoTrashSharp />
               </button>
+            </td>
+            <td className='mx-2'>
+            <Link to={`/task-profile/${task.id}`} className='btn btn-outline-info text-dark'>
+              <IoInformationCircle />
+              </Link>
             </td>
           </tr>
           ))}
