@@ -28,14 +28,14 @@ const NavBar = () => {
 								className="nav-link active"
 								aria-current="page"
 								to={"/view-task"}>
-								View All Task
+								View Tasks
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link
 								className="nav-link"
 								to={"/add-task"}>
-								Add new Tasks
+								Add Tasks
 							</Link>
 						</li>
 					</ul>
