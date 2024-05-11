@@ -10,7 +10,7 @@ Key Components:
 
 * React.js: Utilized for building dynamic and interactive user interfaces. React components are modular and reusable, facilitating the development of complex UI elements.
 
-* Functional Components and Hooks: Functional components are used extensively, along with React Hooks such as useState and useEffect, for managing component state and lifecycle.
+* Hooks: React Hooks such as useState and useEffect, for managing component state and lifecycle.
 
 * Axios: A lightweight HTTP client for making asynchronous HTTP requests to the backend API endpoints. Axios simplifies data fetching and handling of responses.
 
