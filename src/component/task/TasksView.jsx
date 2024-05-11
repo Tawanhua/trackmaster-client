@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { IoTrashOutline, IoPencil, IoEye } from "react-icons/io5";
+import { Link } from "react-router-dom";
+
 
 const TasksView = () => {
   const[tasks, setTasks] = useState([])
@@ -18,18 +21,18 @@ const TasksView = () => {
   }
   return (
     <section>
-      <table>
+      <table className='table table-bordered table-hover'>
         <thead>
-            <tr>
+            <tr className='text-center'>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th>Duration</th>
-                <th>Actions</th>
+                <th colSpan='3'>Actions</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody className='text-center'>
           {tasks.map((task, index) => (
             <tr key={task.id}>
               <th scope='row' key={index}>
@@ -39,9 +42,21 @@ const TasksView = () => {
             <td>{task.title}</td>
             <td>{task.description}</td>
             <td>{task.duration}</td>
-            <td>View</td>
-            <td>Update</td>
-            <td>Delete</td>
+            <td className='mx-2'>
+            <Link to={`/task-profile/${task.id}`} className='btn btn-info'>
+              <IoEye />
+              </Link>
+            </td>
+            <td className='mx-2'>
+            <Link to={`/edit-task/${task.id}`} className='btn btn-warning'>
+              <IoPencil />
+              </Link>
+            </td>
+            <td className='mx-2'>
+            <button className='btn btn-danger'>
+              <IoTrashOutline />
+              </button>
+            </td>
           </tr>
           ))}
         </tbody>
