@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AddTask from './component/task/AddTask';
 import EditTask from './component/task/EditTask';
 import TaskPofile from './component/task/TaskProfile';
+import Search from './component/common/Search';
 
 
 function App() {

@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { IoTrashOutline, IoPencil, IoEye } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Search from '../common/Search';
 
 
 const TasksView = () => {
   const[tasks, setTasks] = useState([])
+  const[search, setSearch] = useState('')
   useEffect(() => {
     loadTasks()
   }, [])
+
   const loadTasks = async()=>{
     const result = await axios.get("http://localhost:8080/tasks", {
       validateStatus: () => {
@@ -19,12 +22,15 @@ const TasksView = () => {
       setTasks(result.data)
     }
   }
+
   const handleDelte = async(id) => {
     await axios.delete(`http://localhost:8080/tasks/delete/${id}`)
     loadTasks()
   }
+
   return (
     <section>
+      <Search search={search} setSearch={setSearch}/>
       <table className='table table-bordered table-hover shadow'>
         <thead>
             <tr className='text-center'>
@@ -37,7 +43,9 @@ const TasksView = () => {
             </tr>
         </thead>
         <tbody className='text-center'>
-          {tasks.map((task, index) => (
+          {tasks.filter((st) => st.name
+          .toLowerCase().includes(search))
+          .map((task, index) => (
             <tr key={task.id}>
               <th scope='row' key={index}>
                 {index + 1}
