@@ -9,7 +9,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-![Screenshot 2024-05-11 043357](https://github.com/Tawanhua/trackmaster-client/assets/64333670/9013a9e0-a710-4e28-9b06-34f380abc11f)
+![Screenshot 2024-05-11 043357](https://github.com/Tawanhua/trackmaster-client/assets/64333670/cd529d21-1baf-4d52-9948-f06076f22dc7)
 
 ![Screenshot 2024-05-11 043426](https://github.com/Tawanhua/trackmaster-client/assets/64333670/6384eb89-6253-4ba5-b6c6-4d2a8a2bfc85)
 
